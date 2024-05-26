@@ -7,7 +7,6 @@ import { CgSearch } from "react-icons/cg";
 const App = () => {
   const [data, setData] = useState([]);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  console.log(data);
 
   useEffect(() => {
     axios.get(`${BASE_URL}`).then(function (response) {
@@ -26,8 +25,7 @@ const App = () => {
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);
   };
-  const [search, setSearch] = useState("");
-  console.log(search);
+ 
 
   return (
     <div>
