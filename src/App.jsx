@@ -13,15 +13,7 @@ const App = () => {
       setData(response.data);
     });
   }, []);
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
-  }, [isDarkMode]);
-
+  
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);
   };
@@ -48,7 +40,6 @@ const App = () => {
             <input
               type="search"
               id="default-search"
-              onChange={(e) => setSearch(e.target.value)}
               className={ `first-letter:first-line:rounded-lg bg-transparent w-[600px]  font-normal text-[#ABBBC2] placeholder-[#6B7280] outline-none   ${
                 isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"
               } transition-colors duration-500`}
